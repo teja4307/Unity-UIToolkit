@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/SettingsMenu.uss?fileID=7433441132597879392&amp;guid=5d5bee8501516164d99b2de01b031ded&amp;type=3#SettingsMenu" />
+    <ui:VisualElement name="SettingsWrapper" class="settings-wrapper">
+        <ui:Label text="SETTINGS" class="settings-title" />
+        <ui:VisualElement class="slider-block">
+            <ui:Label text="Music Volume" class="slider-label" />
+            <ui:Slider name="MusicSlider" show-fill="true" fill="true" enabled="true" class="settings-slider" />
+        </ui:VisualElement>
+        <ui:VisualElement class="slider-block">
+            <ui:Label text="SFX Volume" class="slider-label" />
+            <ui:Slider name="SFXSlider" show-fill="true" fill="true" class="settings-slider" />
+        </ui:VisualElement>
+        <ui:Button name="BackButton" text="Back" class="back-button" />
+    </ui:VisualElement>
+</ui:UXML>
