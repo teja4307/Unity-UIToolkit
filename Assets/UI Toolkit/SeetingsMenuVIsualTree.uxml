@@ -3,12 +3,16 @@
     <ui:VisualElement name="SettingsWrapper" class="settings-wrapper">
         <ui:Label text="SETTINGS" class="settings-title" />
         <ui:VisualElement class="slider-block">
-            <ui:Label text="Music Volume" class="slider-label" />
-            <ui:Slider name="MusicSlider" show-fill="true" fill="true" enabled="true" class="settings-slider" />
+            <ui:Label text="Master Volume" class="slider-label" />
+            <ui:Slider name="MasterSlider" show-fill="true" fill="true" enabled="true" value="10" high-value="1" class="settings-slider" />
         </ui:VisualElement>
         <ui:VisualElement class="slider-block">
+            <ui:Label text="Music Volume" class="slider-label" />
+            <ui:Slider name="MusicSlider" show-fill="true" fill="true" enabled="true" value="10" high-value="1" class="settings-slider" />
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" class="slider-block">
             <ui:Label text="SFX Volume" class="slider-label" />
-            <ui:Slider name="SFXSlider" show-fill="true" fill="true" class="settings-slider" />
+            <ui:Slider name="SFXSlider" show-fill="true" fill="true" value="10" high-value="1" class="settings-slider" />
         </ui:VisualElement>
         <ui:Button name="BackButton" text="Back" class="back-button" />
     </ui:VisualElement>
