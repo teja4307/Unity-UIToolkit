@@ -4,7 +4,7 @@
         <ui:Label text="Scroll View Carousel" class="header-label" />
         <ui:VisualElement class="scroll-container">
             <ui:Button name="LeftButton" text="◀" class="arrow-btn" />
-            <ui:ScrollView name="CardScrollView" mode="horizontal" horizontal-scroller-visibility="hidden" vertical-scroller-visibility="hidden" class="carousel-scroll">
+            <ui:ScrollView name="CardScrollView" mode="horizontal" horizontal-scroller-visibility="hidden" vertical-scroller-visibility="hidden" mouse-wheel-scroll-size="0" class="carousel-scroll">
                 <ui:VisualElement class="card">
                     <ui:Label text="Card 1" class="card-title" />
                     <ui:Button text="Click" class="card-button" />

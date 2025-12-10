@@ -1,4 +1,4 @@
-﻿#contentScrollView {
+#contentScrollView {
     background-color: rgb(31, 31, 31);
     border: 2px solid rgb(60, 60, 60);
     border-radius: 8px;
@@ -7,7 +7,7 @@
 #itemsContainer {
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 300%;
+    height: 0%;
 }
 
 .itemRow {
@@ -53,22 +53,20 @@
     color: black;
 }
 
-/* --------------------------- */
-/* Increase horizontal scrollbar height for Editor UI Toolkit ScrollView */
-unity-scroller.horizontal {
-    height: 60px;          /* adjust height as needed */
+unityscroller.horizontal {
+    height: 100px;
     min-height: 60px;
     border-radius: 8px;
 }
 
-unity-scroller.horizontal > .unity-base-slider__tracker {
+unityscroller.horizontal > .unity-base-slider__tracker {
     height: 60px;
-    background-color: gray;  /* change as desired */
+    background-color: gray;
     border-radius: 8px;
 }
 
-unity-scroller.horizontal > .unity-base-slider__dragger {
+unityscroller.horizontal > .unity-base-slider__dragger {
     height: 60px;
-    background-color: yellow; /* change as desired */
+    background-color: yellow;
     border-radius: 8px;
 }
