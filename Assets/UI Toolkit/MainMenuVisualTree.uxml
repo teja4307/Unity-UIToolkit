@@ -4,6 +4,7 @@
         <ui:Label name="MenuTitle" text="MAIN MENU" class="menu-title" />
         <ui:Button name="PlayButton" text="Play" class="menu-button" />
         <ui:Button name="SettingsButton" text="Settings" class="menu-button" />
+        <ui:Button name="ScrollView" text="Scroll View" class="menu-button" />
         <ui:Button name="QuitButton" text="Quit" class="menu-button" />
     </ui:VisualElement>
 </ui:UXML>

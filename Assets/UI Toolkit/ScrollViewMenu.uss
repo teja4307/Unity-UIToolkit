@@ -1,0 +1,74 @@
+﻿#contentScrollView {
+    background-color: rgb(31, 31, 31);
+    border: 2px solid rgb(60, 60, 60);
+    border-radius: 8px;
+}
+
+#itemsContainer {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 300%;
+}
+
+.itemRow {
+    width: 600px;
+    height: 659px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgb(44, 44, 44);
+    border: 1px solid rgb(68, 68, 68);
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 70px;
+    flex-grow: 1;
+    margin-left: 0;
+    left: 10px;
+    top: 100px;
+}
+
+.itemLabel {
+    font-size: 55px;
+    color: white;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.itemButton {
+    width: 100%;
+    height: 60px;
+    font-size: 29px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    margin-bottom: 10px;
+}
+
+.itemButton:hover {
+    background-color: rgb(85, 85, 85);
+}
+
+.itemButton:active {
+    background-color: rgb(76, 175, 80);
+    color: black;
+}
+
+/* --------------------------- */
+/* Increase horizontal scrollbar height for Editor UI Toolkit ScrollView */
+unity-scroller.horizontal {
+    height: 60px;          /* adjust height as needed */
+    min-height: 60px;
+    border-radius: 8px;
+}
+
+unity-scroller.horizontal > .unity-base-slider__tracker {
+    height: 60px;
+    background-color: gray;  /* change as desired */
+    border-radius: 8px;
+}
+
+unity-scroller.horizontal > .unity-base-slider__dragger {
+    height: 60px;
+    background-color: yellow; /* change as desired */
+    border-radius: 8px;
+}

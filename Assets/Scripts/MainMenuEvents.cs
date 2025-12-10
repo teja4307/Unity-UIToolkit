@@ -4,27 +4,21 @@ using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
 {
-   
     private Button _button;
     private Button settingsButton;
     private Button quitButton;
+    private Button scrollView;
   
-    private void Awake()
+    private void Start()
     {
-        //document=GetComponent<UIDocument>();
-        UiHandler.instance.Awake();
-        _button = UiHandler.instance.document.rootVisualElement.Q<Button>("PlayButton");
-        settingsButton = UiHandler.instance.document.rootVisualElement.Q<Button>("SettingsButton");
-        quitButton = UiHandler.instance.document.rootVisualElement.Q<Button>("QuitButton");
-       
-
-    }
-    
-    private void OnEnable()
-    {
+        _button = UiDocuments.instance.document.rootVisualElement.Q<Button>("PlayButton");
+        settingsButton = UiDocuments.instance.document.rootVisualElement.Q<Button>("SettingsButton");
+        quitButton = UiDocuments.instance.document.rootVisualElement.Q<Button>("QuitButton");
+        scrollView = UiDocuments.instance.document.rootVisualElement.Q<Button>("ScrollView");
         _button.RegisterCallback<ClickEvent>(OnPlayButtonClick);
         settingsButton.RegisterCallback<ClickEvent>(OnSettingsButtonClick);
         quitButton.RegisterCallback<ClickEvent>(OnQuitButtonClick);
+        scrollView.RegisterCallback<ClickEvent>(OnScrollViewButtonClick);
        
     }
     private void OnDisable()
@@ -32,7 +26,8 @@ public class MainMenu : MonoBehaviour
         _button.UnregisterCallback<ClickEvent>(OnPlayButtonClick);
         settingsButton.UnregisterCallback<ClickEvent>(OnSettingsButtonClick);
         quitButton.UnregisterCallback<ClickEvent>(OnQuitButtonClick);
-       
+        scrollView.UnregisterCallback<ClickEvent>(OnScrollViewButtonClick);
+
 
 
     }
@@ -46,7 +41,7 @@ public class MainMenu : MonoBehaviour
 
         // Hide Main Menu UI
         //document.gameObject.SetActive(false);
-        UiHandler.instance.ActiveAndHide(UiHandler.instance.settingsDoc,UiHandler.instance.document);
+        UiDocuments.instance.ActiveAndHide(UiDocuments.instance.settingsDoc,UiDocuments.instance.document);
         // Show Settings UI
         //settingsDoc.gameObject.SetActive(true);
     }
@@ -59,5 +54,8 @@ public class MainMenu : MonoBehaviour
        // EditorApplication.Exit(1);
     } 
 
-  
+  void OnScrollViewButtonClick(ClickEvent _event)
+    {
+        UiDocuments.instance.ActiveAndHide(UiDocuments.instance.scrollViewDoc,UiDocuments.instance.document);
+    }
 }

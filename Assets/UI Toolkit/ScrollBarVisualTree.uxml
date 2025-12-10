@@ -1,0 +1,50 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/UI%20Toolkit/ScrollViewMenu.uss?fileID=7433441132597879392&amp;guid=ad55b4e0a4bdb654fb03f41933112c27&amp;type=3#ScrollViewMenu" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:ScrollView name="contentScrollView" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Visible" mode="Horizontal" touch-scroll-type="Clamped" style="width: 1920px; height: 478px; margin-right: 0; flex-grow: 1; flex-shrink: 1;">
+            <ui:VisualElement name="itemsContainer" style="flex-direction: row; flex-wrap: nowrap;">
+                <ui:VisualElement class="itemRow">
+                    <ui:Label text="Item 1" class="itemLabel" />
+                    <ui:Button text="Select" name="btn1" class="itemButton" />
+                </ui:VisualElement>
+                <ui:VisualElement class="itemRow">
+                    <ui:Label text="Item 2" class="itemLabel" />
+                    <ui:Button text="Select" name="btn2" class="itemButton" />
+                </ui:VisualElement>
+                <ui:VisualElement class="itemRow">
+                    <ui:Label text="Item 3" class="itemLabel" />
+                    <ui:Button text="Select" name="btn3" class="itemButton" />
+                </ui:VisualElement>
+                <ui:VisualElement class="itemRow">
+                    <ui:Label text="Item 4" class="itemLabel" />
+                    <ui:Button text="Select" name="btn4" class="itemButton" />
+                </ui:VisualElement>
+                <ui:VisualElement class="itemRow">
+                    <ui:Label text="Item 5" class="itemLabel" />
+                    <ui:Button text="Select" name="btn5" class="itemButton" />
+                </ui:VisualElement>
+                <ui:VisualElement class="itemRow">
+                    <ui:Label text="Item 6" class="itemLabel" />
+                    <ui:Button text="Select" name="btn6" class="itemButton" />
+                </ui:VisualElement>
+                <ui:VisualElement class="itemRow">
+                    <ui:Label text="Item 7" class="itemLabel" />
+                    <ui:Button text="Select" name="btn7" class="itemButton" />
+                </ui:VisualElement>
+                <ui:VisualElement class="itemRow">
+                    <ui:Label text="Item 8" class="itemLabel" />
+                    <ui:Button text="Select" name="btn8" class="itemButton" />
+                </ui:VisualElement>
+                <ui:VisualElement class="itemRow">
+                    <ui:Label text="Item 9" class="itemLabel" />
+                    <ui:Button text="Select" name="btn9" class="itemButton" />
+                </ui:VisualElement>
+                <ui:VisualElement class="itemRow">
+                    <ui:Label text="Item 10" class="itemLabel" />
+                    <ui:Button text="Select" name="btn10" class="itemButton" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:Button text="Back" name="BackButton" class="itemButton" style="position: absolute; width: 280px; height: 80px; top: 895px; left: 815px; font-size: 30px;" />
+    </ui:VisualElement>
+</ui:UXML>

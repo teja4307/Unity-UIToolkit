@@ -5,25 +5,19 @@ using UnityEngine.UIElements;
 
 public class SettingMenu : MonoBehaviour
 {
+
     [SerializeField] private AudioMixer audioMixer;
 
     private Slider masterSlider;
     private Slider musicSlider;
     private Slider sfxSlider;
     private Button backButton;
-
-
-    private void Awake()
+    private void Start()
     {
-        UiHandler.instance.Awake();
-        masterSlider = UiHandler.instance.settingsDoc.rootVisualElement.Q<Slider>("MasterSlider");
-        musicSlider = UiHandler.instance.settingsDoc.rootVisualElement.Q<Slider>("MusicSlider");
-        sfxSlider = UiHandler.instance.settingsDoc.rootVisualElement.Q<Slider>("SFXSlider");
-        backButton = UiHandler.instance.settingsDoc.rootVisualElement.Q<Button>("BackButton");
-    }
-
-    private void OnEnable()
-    {
+        masterSlider = UiDocuments.instance.settingsDoc.rootVisualElement.Q<Slider>("MasterSlider");
+        musicSlider = UiDocuments.instance.settingsDoc.rootVisualElement.Q<Slider>("MusicSlider");
+        sfxSlider = UiDocuments.instance.settingsDoc.rootVisualElement.Q<Slider>("SFXSlider");
+        backButton = UiDocuments.instance.settingsDoc.rootVisualElement.Q<Button>("BackButton");
         masterSlider.RegisterValueChangedCallback(evt => SetMasterVolume(evt.newValue));
         musicSlider.RegisterValueChangedCallback(evt => SetMusicVolume(evt.newValue));
         sfxSlider.RegisterValueChangedCallback(evt => SetSFXVolume(evt.newValue));
@@ -65,7 +59,7 @@ public class SettingMenu : MonoBehaviour
 
         // Hide Main Menu UI
         //document.gameObject.SetActive(true);
-        UiHandler.instance.ActiveAndHide(UiHandler.instance.document,UiHandler.instance.settingsDoc);
+        UiDocuments.instance.ActiveAndHide(UiDocuments.instance.document,UiDocuments.instance.settingsDoc);
         // Show Settings UI
         //settingsDoc.gameObject.SetActive(false);
 
