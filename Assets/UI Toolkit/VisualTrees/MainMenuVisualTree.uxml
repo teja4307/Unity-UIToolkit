@@ -1,10 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/MainMenu.uss?fileID=7433441132597879392&amp;guid=f8eeeda916363d741a570f21ad77aedc&amp;type=3#MainMenu" />
+    <Style src="project://database/Assets/UI%20Toolkit/USS%20Files/MainMenu.uss?fileID=7433441132597879392&amp;guid=f8eeeda916363d741a570f21ad77aedc&amp;type=3#MainMenu" />
     <ui:VisualElement name="MainMenuWrapper" class="menu-wrapper">
         <ui:Label name="MenuTitle" text="MAIN MENU" class="menu-title" />
         <ui:Button name="PlayButton" text="Play" class="menu-button" />
         <ui:Button name="SettingsButton" text="Settings" class="menu-button" />
-        <ui:Button name="ScrollView" text="Scroll View" class="menu-button" />
+        <ui:Button name="ScrollBar" text="ScrollBar" class="menu-button" />
+        <ui:Button name="ScrollView" text="ScrollView" emoji-fallback-support="false" class="menu-button" />
         <ui:Button name="QuitButton" text="Quit" class="menu-button" />
     </ui:VisualElement>
 </ui:UXML>

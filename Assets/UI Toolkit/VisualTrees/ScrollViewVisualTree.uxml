@@ -1,0 +1,30 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/USS%20Files/ScrollView.uss?fileID=7433441132597879392&amp;guid=316ae82c9132da14495050546f998a29&amp;type=3#ScrollView" />
+    <ui:VisualElement class="main-container">
+        <ui:Label text="Scroll View Carousel" class="header-label" />
+        <ui:VisualElement class="scroll-container">
+            <ui:Button name="LeftButton" text="◀" class="arrow-btn" />
+            <ui:ScrollView name="CardScrollView" mode="horizontal" horizontal-scroller-visibility="hidden" vertical-scroller-visibility="hidden" class="carousel-scroll">
+                <ui:VisualElement class="card">
+                    <ui:Label text="Card 1" class="card-title" />
+                    <ui:Button text="Click" class="card-button" />
+                </ui:VisualElement>
+                <ui:VisualElement class="card">
+                    <ui:Label text="Card 2" class="card-title" />
+                    <ui:Button text="Click" class="card-button" />
+                </ui:VisualElement>
+                <ui:VisualElement class="card">
+                    <ui:Label text="Card 3" class="card-title" />
+                    <ui:Button text="Click" class="card-button" />
+                </ui:VisualElement>
+            </ui:ScrollView>
+            <ui:Button name="RightButton" text="▶" class="arrow-btn" />
+            <ui:Button text="x" name="BackButton" class="arrow-btn" style="position: absolute; top: 8px; left: 925px; flex-shrink: 1; flex-grow: 1; font-size: 30px; -unity-font-style: bold;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="RadioGroup" class="radio-container">
+            <ui:Label name="indicator1" class="radio-dot active" />
+            <ui:Label name="indicator2" class="radio-dot" />
+            <ui:Label name="indicator3" class="radio-dot" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

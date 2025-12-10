@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 
-public class ScrollViewMenu : MonoBehaviour
+public class ScrollBarMenu : MonoBehaviour
 {
 
     private Button backButton;
@@ -10,7 +10,7 @@ public class ScrollViewMenu : MonoBehaviour
 
     void Start()
     {
-        backButton = UiDocuments.instance.scrollViewDoc.rootVisualElement.Q<Button>("BackButton");
+        backButton = UiDocuments.instance.scrollBarDoc.rootVisualElement.Q<Button>("BackButton");
 
         backButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
     }
@@ -22,6 +22,6 @@ public class ScrollViewMenu : MonoBehaviour
 
     void OnBackButtonClick(ClickEvent evt)
     {
-        UiDocuments.instance.ActiveAndHide(UiDocuments.instance.document, UiDocuments.instance.scrollViewDoc);
+        UiDocuments.instance.ActiveAndHide(UiDocuments.instance.document, UiDocuments.instance.scrollBarDoc);
     }
 }

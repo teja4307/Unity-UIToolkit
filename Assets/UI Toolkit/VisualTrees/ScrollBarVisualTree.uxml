@@ -45,6 +45,6 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:ScrollView>
-        <ui:Button text="Back" name="BackButton" class="itemButton" style="position: absolute; width: 280px; height: 80px; top: 895px; left: 815px; font-size: 30px;" />
+        <ui:Button text="Back" name="BackButton" class="itemButton" style="position: absolute; width: 280px; height: 80px; top: 895px; left: 815px; font-size: 30px;"  />
     </ui:VisualElement>
 </ui:UXML>

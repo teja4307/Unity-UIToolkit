@@ -7,9 +7,10 @@ public class UiDocuments : MonoBehaviour
 
     public UIDocument document;
     public UIDocument settingsDoc;
+    public UIDocument scrollBarDoc;
     public UIDocument scrollViewDoc;
 
-   
+
     public void Awake()
     {
         if (instance == null)
@@ -17,6 +18,7 @@ public class UiDocuments : MonoBehaviour
             instance = this;
         }
         settingsDoc.rootVisualElement.style.display=DisplayStyle.None;
+        scrollBarDoc.rootVisualElement.style.display =DisplayStyle.None;
         scrollViewDoc.rootVisualElement.style.display =DisplayStyle.None;
     }
 

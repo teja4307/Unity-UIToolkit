@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     private Button _button;
     private Button settingsButton;
     private Button quitButton;
+    private Button scrollBar;
     private Button scrollView;
   
     private void Start()
@@ -14,10 +15,12 @@ public class MainMenu : MonoBehaviour
         _button = UiDocuments.instance.document.rootVisualElement.Q<Button>("PlayButton");
         settingsButton = UiDocuments.instance.document.rootVisualElement.Q<Button>("SettingsButton");
         quitButton = UiDocuments.instance.document.rootVisualElement.Q<Button>("QuitButton");
+        scrollBar = UiDocuments.instance.document.rootVisualElement.Q<Button>("ScrollBar");
         scrollView = UiDocuments.instance.document.rootVisualElement.Q<Button>("ScrollView");
         _button.RegisterCallback<ClickEvent>(OnPlayButtonClick);
         settingsButton.RegisterCallback<ClickEvent>(OnSettingsButtonClick);
         quitButton.RegisterCallback<ClickEvent>(OnQuitButtonClick);
+        scrollBar.RegisterCallback<ClickEvent>(OnScrollBarButtonClick);
         scrollView.RegisterCallback<ClickEvent>(OnScrollViewButtonClick);
        
     }
@@ -26,8 +29,8 @@ public class MainMenu : MonoBehaviour
         _button.UnregisterCallback<ClickEvent>(OnPlayButtonClick);
         settingsButton.UnregisterCallback<ClickEvent>(OnSettingsButtonClick);
         quitButton.UnregisterCallback<ClickEvent>(OnQuitButtonClick);
-        scrollView.UnregisterCallback<ClickEvent>(OnScrollViewButtonClick);
-
+        scrollBar.UnregisterCallback<ClickEvent>(OnScrollBarButtonClick);
+        scrollView.RegisterCallback<ClickEvent>(OnScrollViewButtonClick);
 
 
     }
@@ -54,8 +57,12 @@ public class MainMenu : MonoBehaviour
        // EditorApplication.Exit(1);
     } 
 
-  void OnScrollViewButtonClick(ClickEvent _event)
+  void OnScrollBarButtonClick(ClickEvent _event)
     {
-        UiDocuments.instance.ActiveAndHide(UiDocuments.instance.scrollViewDoc,UiDocuments.instance.document);
+        UiDocuments.instance.ActiveAndHide(UiDocuments.instance.scrollBarDoc,UiDocuments.instance.document);
+    }
+    void OnScrollViewButtonClick(ClickEvent _event)
+    {
+        UiDocuments.instance.ActiveAndHide(UiDocuments.instance.scrollViewDoc, UiDocuments.instance.document);
     }
 }
