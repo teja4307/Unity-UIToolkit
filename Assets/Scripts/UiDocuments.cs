@@ -9,6 +9,7 @@ public class UiDocuments : MonoBehaviour
     public UIDocument settingsDoc;
     public UIDocument scrollBarDoc;
     public UIDocument scrollViewDoc;
+    public UIDocument loadingScreenDoc;
 
 
     public void Awake()
@@ -20,6 +21,7 @@ public class UiDocuments : MonoBehaviour
         settingsDoc.rootVisualElement.style.display=DisplayStyle.None;
         scrollBarDoc.rootVisualElement.style.display =DisplayStyle.None;
         scrollViewDoc.rootVisualElement.style.display =DisplayStyle.None;
+        loadingScreenDoc.rootVisualElement.style.display = DisplayStyle.None;
     }
 
 

@@ -8,6 +8,10 @@
     row-gap: 25px;
 }
 
+.menu-wrapper_inactive {
+    display: none;
+}
+
 .menu-title {
     font-size: 50px;
     unity-font-style: bold;
@@ -36,3 +40,9 @@
     background-color: rgb(120, 120, 150);
 }
 
+#unity-text-input > TextElement {
+    color: rgb(0, 0, 0);
+    align-self: auto;
+    align-content: auto;
+    flex-direction: column;
+}

@@ -8,6 +8,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     height: 0%;
+    width: 0;
 }
 
 .itemRow {
@@ -53,20 +54,16 @@
     color: black;
 }
 
-unityscroller.horizontal {
-    height: 100px;
-    min-height: 60px;
-    border-radius: 8px;
+Scroller {
+    bottom: 40px;
+    flex-grow: 0;
 }
 
-unityscroller.horizontal > .unity-base-slider__tracker {
-    height: 60px;
-    background-color: gray;
-    border-radius: 8px;
+Scroller * {
+    height: 33px;
 }
 
-unityscroller.horizontal > .unity-base-slider__dragger {
-    height: 60px;
-    background-color: yellow;
-    border-radius: 8px;
+Scroller #unity-dragger {
+    height: 29px;
+    background-color: rgb(53, 53, 53);
 }

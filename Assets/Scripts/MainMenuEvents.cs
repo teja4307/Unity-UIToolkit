@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
@@ -36,6 +38,8 @@ public class MainMenu : MonoBehaviour
     private void OnPlayButtonClick(ClickEvent _event)
     {
         Debug.Log("Start Button is Clicked");
+        UiDocuments.instance.ActiveAndHide(UiDocuments.instance.loadingScreenDoc,UiDocuments.instance.document);
+        LoadScene();
     }
     private void OnSettingsButtonClick(ClickEvent _event)
     {
@@ -63,5 +67,35 @@ public class MainMenu : MonoBehaviour
     void OnScrollViewButtonClick(ClickEvent _event)
     {
         UiDocuments.instance.ActiveAndHide(UiDocuments.instance.scrollViewDoc, UiDocuments.instance.document);
+    }
+
+    void LoadScene()
+    {
+        StartCoroutine(LoadSceneAsyc());
+    }
+    IEnumerator LoadSceneAsyc()
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync("New Scene");
+        if(SceneManager.GetSceneByName("New Scene").isLoaded)
+        {
+            SceneManager.UnloadSceneAsync("New Scene");
+        }
+
+        operation.allowSceneActivation = false;
+
+        while (!operation.isDone)
+        {
+            float progressvalue = operation.progress * 100;
+            if (progressvalue >= 90)
+            {
+                progressvalue = 100f;
+            }
+            LoadingScreenHandler.instance.progressBar.value = progressvalue;
+            LoadingScreenHandler.instance.progressPercentage.text = progressvalue.ToString() + "%";
+
+            yield return new WaitForSeconds(0.5f);
+            operation.allowSceneActivation=true;
+            //yield return null;
+        } 
     }
 }

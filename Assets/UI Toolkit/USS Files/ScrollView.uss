@@ -48,6 +48,12 @@
 .card-button {
     width: 100px;
     height: 40px;
+    transition-duration: 0.35s;
+}
+
+.card-button:hover {
+    scale: 1.1 1.1;
+    background-color: rgb(89, 94, 89);
 }
 
 .arrow-btn {
@@ -64,7 +70,7 @@
     scale: 1.15;
 }
 
-.radio-container {
+.dot-container {
     margin-top: 20px;
     flex-direction: row;
     justify-content: center;
@@ -72,13 +78,13 @@
     bottom: 140px;
 }
 
-.radio-dot {
+.dot {
     width: 14px;
     height: 14px;
     border-radius: 7px;
     background-color: grey;
 }
 
-.radio-dot.active {
+.dot.active {
     background-color: yellow;
 }
