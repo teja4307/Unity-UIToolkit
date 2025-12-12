@@ -5,7 +5,7 @@
         <ui:Button name="PlayButton" text="Play" class="menu-button" />
         <ui:Button name="SettingsButton" text="Settings" class="menu-button" />
         <ui:Button name="ScrollBar" text="ScrollBar" class="menu-button" />
-        <ui:Button name="ScrollView" text="ScrollView" emoji-fallback-support="false" class="menu-button" />
+        <ui:Button name="ScrollView" text="ScrollView" emoji-fallback-support="true" class="menu-button" />
         <ui:Button name="QuitButton" text="Quit" class="menu-button" />
     </ui:VisualElement>
 </ui:UXML>

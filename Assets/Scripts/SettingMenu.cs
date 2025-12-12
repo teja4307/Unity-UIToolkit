@@ -21,6 +21,9 @@ public class SettingMenu : MonoBehaviour
         musicSlider.RegisterValueChangedCallback(evt => SetMusicVolume(evt.newValue));
         sfxSlider.RegisterValueChangedCallback(evt => SetSFXVolume(evt.newValue));
         backButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume");
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume");
 
     }
     private void OnDisable()
@@ -35,14 +38,17 @@ public class SettingMenu : MonoBehaviour
     void SetMasterVolume(float volume)
     {
         audioMixer.SetFloat("masterVolume", SliderToDecibals(volume));
+        PlayerPrefs.SetFloat("MasterVolume",masterSlider.value);
     }
     void SetMusicVolume(float volume)
     {
         audioMixer.SetFloat("musicVolume", SliderToDecibals(volume));
+        PlayerPrefs.SetFloat("MusicVolume", musicSlider.value);
     }
     void SetSFXVolume(float volume)
     {
         audioMixer.SetFloat("sfxVolume", SliderToDecibals(volume));
+        PlayerPrefs.SetFloat("SFXVolume",sfxSlider.value);
     }
 
     float SliderToDecibals(float value)

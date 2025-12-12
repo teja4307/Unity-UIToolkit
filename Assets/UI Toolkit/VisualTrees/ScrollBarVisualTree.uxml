@@ -1,13 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Template name="Card" src="project://database/Assets/Templates/Card.uxml?fileID=9197481963319205126&amp;guid=127aa91ac73ded6439b1f61a8e494b8d&amp;type=3#Card" />
     <Style src="project://database/Assets/UI%20Toolkit/USS%20Files/ScrollBarMenu.uss?fileID=7433441132597879392&amp;guid=ad55b4e0a4bdb654fb03f41933112c27&amp;type=3#ScrollBarMenu" />
     <ui:VisualElement style="flex-grow: 1;">
         <ui:ScrollView name="contentScrollView" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="AlwaysVisible" mode="Horizontal" touch-scroll-type="Clamped" focusable="false" nested-interaction-kind="Default" mouse-wheel-scroll-size="0" style="width: 1920px; height: 478px; margin-right: 0; flex-grow: 1; flex-shrink: 1;">
             <ui:VisualElement name="itemsContainer" style="flex-direction: row; flex-wrap: nowrap; flex-grow: 0; flex-shrink: 0; height: 100%; width: 100%;">
-                <ui:VisualElement class="itemRow">
-                    <ui:Label text="Item 1" class="itemLabel" />
-                    <ui:Button text="Select" name="btn1" class="itemButton" />
-                </ui:VisualElement>
-                <ui:VisualElement class="itemRow">
+                <ui:Instance template="Card" name="Card" />
+                <ui:VisualElement class="itemRow" style="flex-basis: auto; flex-grow: 0;">
                     <ui:Label text="Item 2" class="itemLabel" />
                     <ui:Button text="Select" name="btn2" class="itemButton" />
                 </ui:VisualElement>
