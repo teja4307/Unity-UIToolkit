@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+>
+
+    <ui:VisualElement class="root">
+
+        <!-- ================= LEFT PANEL ================= -->
+        <ui:VisualElement class="left-panel">
+
+            <ui:VisualElement class="civ-header">
+                <ui:Label text="TEUTONS" class="civ-title"/>
+                <ui:Label text="Medieval Era • 1200 BCE" class="civ-subtitle"/>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="character-image"/>
+
+            <ui:VisualElement class="fame-box">
+                <ui:Label text="FAME POINTS" class="fame-title"/>
+                <ui:Label text="Leave your mark on history" class="fame-desc"/>
+                <ui:Label text="3700" class="fame-value"/>
+            </ui:VisualElement>
+
+            <ui:DropdownField class="civ-dropdown"
+                              label=""
+                              value="Teutons"/>
+        </ui:VisualElement>
+
+        <!-- ================= CENTER PANEL ================= -->
+        <ui:VisualElement class="center-panel">
+
+            <ui:VisualElement class="era-card">
+                <ui:VisualElement class="era-art"/>
+                <ui:Label text="TEUTONS" class="era-name"/>
+                <ui:Label text="LET JUSTICE BE DONE, THOUGH THE WORLD PERISH"
+                          class="era-quote"/>
+
+                <ui:VisualElement class="era-stars">
+                    <ui:VisualElement class="star"/>
+                    <ui:VisualElement class="star"/>
+                    <ui:VisualElement class="star"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+        <!-- ================= RIGHT PANEL ================= -->
+        <ui:VisualElement class="right-panel">
+
+            <ui:VisualElement class="stars-section">
+                <ui:Label text="ERA STARS" class="section-title"/>
+                <ui:Label text="STARS  3/21" class="section-sub"/>
+            </ui:VisualElement>
+
+            <ui:ScrollView class="goals-list">
+                <ui:Label text="• Unocon    22/29   Reward: 300"/>
+                <ui:Label text="• Varkelite 22/29   Reward: 300"/>
+                <ui:Label text="• Zabux     22/29   Reward: 300"/>
+                <ui:Label text="• Lignesia  15/50   Reward: 200"/>
+                <ui:Label text="• Agreoup   34/56   Reward: 1200"/>
+            </ui:ScrollView>
+
+            <ui:VisualElement class="goal-box">
+                <ui:Label text="ERA GOAL" class="section-title"/>
+                <ui:Label text="Collect 7 Stars to advance"
+                          class="goal-desc"/>
+                <ui:Button text="SHOW CULTURES"/>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="deeds-box">
+                <ui:Label text="COMPETITIVE DEEDS" class="section-title"/>
+                <ui:Label text="5 DEEDS COMPLETED"/>
+                <ui:Button text="SHOW DEEDS"/>
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+        <!-- ================= BOTTOM NAV ================= -->
+        <ui:VisualElement class="bottom-nav">
+            <ui:Button text="◀"/>
+            <ui:Label text="Neolithic" class="era-label"/>
+            <ui:Button text="▶"/>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

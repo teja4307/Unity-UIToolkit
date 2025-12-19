@@ -1,0 +1,55 @@
+.card {
+    flex-direction: column;
+    flex-shrink: 0;
+    width: auto;
+    flex-basis: 26%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.scroll_card {
+    flex-grow: 1;
+    flex-basis: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 10px;
+}
+
+.smallcard_label {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.indicators {
+    flex-grow: 0;
+    background-color: rgb(144, 144, 144);
+    border-top-left-radius: 180px;
+    border-top-right-radius: 180px;
+    border-bottom-right-radius: 180px;
+    border-bottom-left-radius: 180px;
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.indicators.active {
+    background-color: rgb(145, 255, 0);
+}
+
+#CardScrollView {
+    flex-grow: 1;
+}
+
+#CardScrollView > .unity-scroll-view__content-container {
+    flex-direction: row;
+}
+
+#CardScrollView > .unity-scroll-view__content-container > * {
+    width: 100%;
+    flex-shrink: 0;
+}

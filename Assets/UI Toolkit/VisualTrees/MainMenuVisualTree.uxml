@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/USS%20Files/MainMenu.uss?fileID=7433441132597879392&amp;guid=f8eeeda916363d741a570f21ad77aedc&amp;type=3#MainMenu" />
-    <ui:VisualElement name="MainMenuWrapper" class="menu-wrapper">
+    <ui:VisualElement name="MainMenuWrapper" class="menu-wrapper" style="background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;);">
         <ui:Label name="MenuTitle" text="MAIN MENU" class="menu-title" />
         <ui:Button name="PlayButton" text="Play" class="menu-button" />
         <ui:Button name="SettingsButton" text="Settings" class="menu-button" />

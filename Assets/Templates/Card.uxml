@@ -1,8 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
-    <ui:VisualElement name="Card" style="flex-grow: 1;">
-        <ui:VisualElement class="itemRow" style="flex-basis: auto; flex-shrink: 1; flex-grow: 0;">
-            <ui:Label text="Item 1" class="itemLabel" />
-            <ui:Button text="Select" name="btn2" class="itemButton" />
-        </ui:VisualElement>
-    </ui:VisualElement>
-</ui:UXML>

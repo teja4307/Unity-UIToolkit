@@ -1,0 +1,163 @@
+.root {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 20px;
+    color: #f0e6c8;
+    font-size: 14px;
+}
+
+/* ================= LEFT ================= */
+.left-panel {
+    width: 22%;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.civ-header {
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.civ-title {
+    font-size: 22px;
+    unity-font-style: bold;
+}
+
+.civ-subtitle {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.character-image {
+    height: 300px;
+    background-color: rgba(255,255,255,0.08);
+    border-radius: 12px;
+}
+
+.fame-box {
+    background-color: rgba(0,0,0,0.6);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.fame-title {
+    unity-font-style: bold;
+}
+
+.fame-desc {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.fame-value {
+    font-size: 26px;
+    color: #f2c94c;
+}
+
+.civ-dropdown {
+    margin-top: 10px;
+}
+
+/* ================= CENTER ================= */
+.center-panel {
+    width: 36%;
+    justify-content: center;
+    align-items: center;
+}
+
+.era-card {
+    width: 320px;
+    height: 520px;
+    background-color: rgba(0,0,0,0.55);
+    border-radius: 16px;
+    align-items: center;
+    padding: 12px;
+}
+
+.era-art {
+    flex-grow: 1;
+    width: 100%;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+
+.era-name {
+    font-size: 24px;
+    unity-font-style: bold;
+    margin-top: 8px;
+}
+
+.era-quote {
+    font-size: 11px;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.era-stars {
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    background-color: #f2c94c;
+    border-radius: 50%;
+}
+
+/* ================= RIGHT ================= */
+.right-panel {
+    width: 26%;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section-title {
+    unity-font-style: bold;
+    font-size: 16px;
+}
+
+.section-sub {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.goals-list {
+    height: 220px;
+    background-color: rgba(0,0,0,0.45);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.goal-box,
+.deeds-box {
+    background-color: rgba(0,0,0,0.55);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+Button {
+    margin-top: 6px;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 6px;
+}
+
+/* ================= BOTTOM ================= */
+.bottom-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    translate: -50% 0;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.era-label {
+    font-size: 22px;
+    unity-font-style: bold;
+}

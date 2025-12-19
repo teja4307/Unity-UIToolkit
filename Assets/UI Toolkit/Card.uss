@@ -1,0 +1,112 @@
+/* ===== CARD ROOT ===== */
+.card {
+    width: 420px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.card-header {
+    background-color: #6c63c7;
+    padding: 16px;
+}
+
+.header-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-item {
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background-size: cover;
+}
+
+.header-text {
+    font-size: 20px;
+    color: white;
+    unity-font-style: bold;
+}
+
+/* ===== TITLE ===== */
+.card-title {
+    margin-top: 12px;
+    font-size: 48px;
+    color: white;
+    unity-font-style: bold;
+    unity-text-align: middle-center;
+}
+
+.card-subtitle {
+    font-size: 26px;
+    color: white;
+    unity-text-align: middle-center;
+}
+
+/* ===== TABS ===== */
+.card-tabs {
+    flex-direction: row;
+}
+
+.tab {
+    flex-grow: 1;
+    padding: 14px;
+    unity-text-align: middle-center;
+    font-size: 22px;
+    unity-font-style: bold;
+}
+
+.tab-active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.tab-inactive {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+/* ===== PRIZES ===== */
+.card-content {
+    padding: 16px;
+}
+
+.prize-item {
+    flex-direction: row;
+    align-items: center;
+    background-color: #eeeeee;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.prize-icon {
+    width: 42px;
+    height: 42px;
+    margin-right: 12px;
+    background-size: cover;
+}
+
+.prize-text {
+    font-size: 22px;
+    unity-font-style: bold;
+}
+
+/* ===== ENTER BUTTON ===== */
+.enter-button {
+    height: 70px;
+    margin: 16px;
+    border-radius: 14px;
+    background-color: #6b6b6b;
+    color: white;
+    font-size: 26px;
+    unity-font-style: bold;
+}

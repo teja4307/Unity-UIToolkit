@@ -1,0 +1,22 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="UserData" style="flex-grow: 0; flex-shrink: 0; flex-direction: row; height: 135px; width: 589px;">
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; background-color: rgb(255, 204, 6); height: 50px; width: 20%; margin-right: 13px; align-self: center; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:Label text="9,999" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 20px; align-self: center;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; background-color: rgb(180, 178, 178); width: 20%; height: 50px; align-self: center; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:Label text="9,999" name="Label" style="font-size: 20px; -unity-font-style: bold; -unity-text-align: upper-center; align-self: center;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; align-items: flex-end;">
+            <ui:Label text="User Name" style="align-items: auto; color: rgb(255, 255, 255); font-size: 20px;" />
+            <ui:Label text="Tour Champion" style="-unity-font-style: bold; color: rgb(255, 255, 255); font-size: 20px;" />
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                <ui:Label text="LVL" style="-unity-font-style: bold; color: rgb(255, 255, 255); font-size: 20px;" />
+                <ui:Label text="999" style="-unity-font-style: bold; color: rgb(255, 255, 255); font-size: 20px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;); border-top-left-radius: 180px; border-top-right-radius: 180px; border-bottom-right-radius: 180px; border-bottom-left-radius: 180px; width: 50px; height: 100px; align-self: center; margin-left: 16px;" />
+    </ui:VisualElement>
+</ui:UXML>

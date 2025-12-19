@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/GameSelectionScreen.uss?fileID=7433441132597879392&amp;guid=ff55947fdf4a2c74eb075a9fdeb120f3&amp;type=3#GameSelectionScreen" />
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-self: center; align-items: center; justify-content: center;">
+        <ui:VisualElement class="indicators indiactors_active" />
+        <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+        <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+        <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+        <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

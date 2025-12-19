@@ -11,12 +11,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: b5e938ed519faa64f89e51a74ac7f52d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/New Scene.unity
     guid: 2ef543f0a1eebd7419318bb2d38fe99f
+  - enabled: 1
+    path: Assets/Scenes/WGTScene.unity
+    guid: 42965d2223a8683458601fbfc7f4e23c
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 0e903f9058ca940d1a7a9fe9312158f5, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 795ec91fca85f4cccbb87e8cbcbfff81, type: 2}

@@ -1,0 +1,52 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="UserData" src="project://database/Assets/UI%20Toolkit/Templates/UserData.uxml?fileID=9197481963319205126&amp;guid=4bbc63e38ea6af24fb2c5d5aefb77500&amp;type=3#UserData" />
+    <ui:VisualElement class="main-container" style="padding-top: 29px; padding-right: 29px; padding-bottom: 29px; padding-left: 29px; background-color: rgba(103, 102, 102, 0.82); height: 865px; flex-shrink: 0; margin-right: 50px; margin-left: 50px;">
+        <ui:VisualElement class="header-section" style="flex-direction: row; justify-content: space-between;">
+            <ui:Button text="Button" class="back-button" style="width: 70px; height: 70px; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px;" />
+            <ui:Label text="GameSelection" parse-escape-sequences="true" class="header-title" style="align-self: flex-start; align-items: flex-start; color: rgb(255, 249, 249); -unity-font-style: bold; font-size: 36px; margin-right: 840px; -unity-text-align: upper-center; top: 7px;" />
+            <ui:Instance template="UserData" class="header-user-data" style="align-items: flex-end; align-self: flex-end;" />
+        </ui:VisualElement>
+        <ui:VisualElement class="content-section" style="flex-direction: row; height: 688px;">
+            <ui:ScrollView mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" nested-interaction-kind="Default" scroll-deceleration-rate="0.135" name="CardScrollView" mouse-wheel-scroll-size="18" class="game-scroll-view card" style="flex-basis: 26%;">
+                <ui:Button class="scroll_card" style="margin-right: 0; margin-left: 0;" />
+                <ui:Button text="Button" class="scroll_card" style="flex-grow: 1; flex-basis: 100%; margin-right: 0; margin-left: 0;" />
+                <ui:Button text="Button" class="scroll_card" style="flex-basis: 100%; margin-right: 0; margin-left: 0;" />
+                <ui:Button text="Button" class="scroll_card" style="flex-grow: 1; flex-basis: 100%; margin-right: 0; margin-left: 0;" />
+                <ui:Button text="Button" class="scroll_card" style="flex-basis: 100%; flex-grow: 1; margin-right: 0; margin-left: 0;" />
+            </ui:ScrollView>
+            <ui:VisualElement name="Top" style="flex-grow: 1; position: absolute; flex-direction: row; width: 460px; background-color: rgb(0, 0, 0); border-top-left-radius: 10px; border-top-right-radius: 10px; left: -1px; height: 51px; display: flex; top: -2px; align-self: center;">
+                <ui:Label text="Featured" style="color: rgb(255, 255, 255); font-size: 25px; -unity-font-style: bold;" />
+                <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-self: center; align-items: center; justify-content: flex-end;">
+                    <ui:Label text="00d : 00h" emoji-fallback-support="true" style="left: 0; color: rgb(255, 255, 255); align-self: flex-end; align-items: flex-end; font-size: 20px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Bottom" style="flex-grow: 1; position: absolute; align-self: center; height: 50px; width: 450px; left: 6px; top: 594px;">
+                <ui:VisualElement name="Indicators" style="flex-grow: 1; flex-direction: row; align-self: center; align-items: center; justify-content: center;">
+                    <ui:VisualElement class="indicators active" />
+                    <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+                    <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+                    <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+                    <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Button name="Button" class="game-card large card" style="flex-basis: 23%; margin-left: 30px; justify-content: flex-end;">
+                <ui:VisualElement name="VisualElement" class="card-image" style="flex-direction: row; align-items: center; justify-content: flex-start;">
+                    <ui:Label text="Head-to-Head" class="card-title" style="font-size: 30px; align-items: center; align-self: center; margin-right: 20px; margin-left: 84px;" />
+                </ui:VisualElement>
+                <ui:Label text="Earn coins, climb divisions,&#10;and get rewards" class="card-subtitle" style="margin-bottom: 59px; font-size: 15px; -unity-font-style: normal;" />
+            </ui:Button>
+            <ui:Button emoji-fallback-support="true" class="game-card large card" style="flex-basis: 23%; margin-left: 30px; justify-content: flex-end;">
+                <ui:Label text="Tournament" class="card-title" style="font-size: 30px; -unity-font-style: normal; margin-bottom: 2px;" />
+                <ui:Label text="Compete in leaderboards&#10;and earn top prizes" class="card-subtitle" style="margin-bottom: 60px; font-size: 15px;" />
+            </ui:Button>
+            <ui:VisualElement class="bottom-cards card" style="flex-shrink: 0; flex-basis: 23%; margin-left: 30px;">
+                <ui:Button name="Button" class="game-card small card" style="flex-shrink: 1; flex-grow: 1; justify-content: flex-end;">
+                    <ui:Label text="Solo Games" selectable="true" class="card-title smallcard_label" />
+                </ui:Button>
+                <ui:Button class="game-card small card" style="flex-shrink: 1; flex-grow: 1; justify-content: flex-end;">
+                    <ui:Label text="Pick-Up Games" class="card-title smallcard_label" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

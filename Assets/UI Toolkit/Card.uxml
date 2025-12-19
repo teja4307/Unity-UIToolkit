@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" editor-extension-mode="False">
+    <ui:Template name="Card" src="project://database/Assets/UI%20Toolkit/Templates/Card.uxml?fileID=9197481963319205126&amp;guid=7f25bb70c622c45428644b315420a9af&amp;type=3#Card" />
+    <Style src="project://database/Assets/UI%20Toolkit/Card.uss?fileID=7433441132597879392&amp;guid=875883b7f5a249f47bd54d7a2be33b11&amp;type=3#Card" />
+    <ui:Instance template="Card" name="Card" />
+</ui:UXML>

@@ -1,0 +1,37 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" editor-extension-mode="False">
+    <ui:VisualElement class="card">
+        <ui:VisualElement class="card-header">
+            <ui:VisualElement class="header-row">
+                <ui:VisualElement class="header-item">
+                    <ui:VisualElement class="header-icon" style="background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;);" />
+                    <ui:Label text="3 Holes" class="header-text" />
+                </ui:VisualElement>
+                <ui:VisualElement class="header-item">
+                    <ui:VisualElement class="header-icon" style="background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;);" />
+                    <ui:Label text="426" class="header-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Label text="Low Chaos" class="card-title" style="-unity-text-align: upper-center;" />
+            <ui:Label text="CTTH Match Play" class="card-subtitle" style="-unity-text-align: upper-center;" />
+        </ui:VisualElement>
+        <ui:VisualElement class="card-tabs">
+            <ui:Label text="Prizes" class="tab tab-active" />
+            <ui:Label text="Rules" class="tab tab-inactive" />
+        </ui:VisualElement>
+        <ui:VisualElement class="card-content">
+            <ui:VisualElement class="prize-item">
+                <ui:VisualElement class="prize-icon" />
+                <ui:Label text="1.8K Coins" class="prize-text" />
+            </ui:VisualElement>
+            <ui:VisualElement class="prize-item">
+                <ui:VisualElement class="prize-icon" />
+                <ui:Label text="Amateur" class="prize-text" />
+            </ui:VisualElement>
+            <ui:VisualElement class="prize-item">
+                <ui:VisualElement class="prize-icon" />
+                <ui:Label text="1x Points" class="prize-text" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button text="ENTER 1.0K" class="enter-button" />
+    </ui:VisualElement>
+</ui:UXML>

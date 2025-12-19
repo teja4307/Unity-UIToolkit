@@ -1,7 +1,8 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/USS%20Files/SecondSceen.uss?fileID=7433441132597879392&amp;guid=837a3b2eac30de942b432de5db22760e&amp;type=3#SecondSceen" />
+    <Style src="project://database/Assets/UI%20Toolkit/USS%20Files/MainMenu.uss?fileID=7433441132597879392&amp;guid=f8eeeda916363d741a570f21ad77aedc&amp;type=3#MainMenu" />
     <ui:VisualElement style="flex-grow: 1; align-items: center; align-self: auto;">
         <ui:Label text="Second Scene" style="font-size: 71px; color: rgb(255, 255, 255);" />
-        <ui:Button text="Main Menu" name="MenuButton" style="width: 300px; height: 100px; margin-top: 370px; font-size: 44px;" />
+        <ui:Button text="Main Menu" name="MenuButton" class="menu-button" style="width: 300px; height: 100px; margin-top: 370px; font-size: 44px;" />
     </ui:VisualElement>
 </ui:UXML>

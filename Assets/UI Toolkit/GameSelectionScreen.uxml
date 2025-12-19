@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="Head-to-Head" src="project://database/Assets/UI%20Toolkit/Templates/Head-to-Head.uxml?fileID=9197481963319205126&amp;guid=d751fb80ff8d89642b92c75f9bc96024&amp;type=3#Head-to-Head" />
+    <ui:Template name="UserData" src="project://database/Assets/UI%20Toolkit/Templates/UserData.uxml?fileID=9197481963319205126&amp;guid=4bbc63e38ea6af24fb2c5d5aefb77500&amp;type=3#UserData" />
+    <Style src="project://database/Assets/UI%20Toolkit/GameSelectionScreen.uss?fileID=7433441132597879392&amp;guid=ff55947fdf4a2c74eb075a9fdeb120f3&amp;type=3#GameSelectionScreen" />
+    <ui:VisualElement name="VisualElement" class="screen-root" style="background-color: rgba(43, 43, 43, 0.47); flex-grow: 1;">
+        <ui:Instance template="UserData" name="UserData" style="align-items: flex-end;" />
+        <ui:Label text="Game selection" style="margin-left: 49px; font-size: 28px; color: rgba(255, 255, 255, 0.52);" />
+        <ui:Instance template="Head-to-Head" name="Head-to-Head" />
+    </ui:VisualElement>
+</ui:UXML>
