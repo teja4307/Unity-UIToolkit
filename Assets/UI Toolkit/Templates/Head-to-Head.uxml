@@ -7,31 +7,33 @@
             <ui:Instance template="UserData" class="header-user-data" style="align-items: flex-end; align-self: flex-end;" />
         </ui:VisualElement>
         <ui:VisualElement class="content-section" style="flex-direction: row; height: 688px;">
-            <ui:ScrollView mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" nested-interaction-kind="Default" scroll-deceleration-rate="0.135" name="CardScrollView" mouse-wheel-scroll-size="18" class="game-scroll-view card" style="flex-basis: 26%;">
-                <ui:Button class="scroll_card" style="margin-right: 0; margin-left: 0;" />
-                <ui:Button text="Button" class="scroll_card" style="flex-grow: 1; flex-basis: 100%; margin-right: 0; margin-left: 0;" />
-                <ui:Button text="Button" class="scroll_card" style="flex-basis: 100%; margin-right: 0; margin-left: 0;" />
-                <ui:Button text="Button" class="scroll_card" style="flex-grow: 1; flex-basis: 100%; margin-right: 0; margin-left: 0;" />
-                <ui:Button text="Button" class="scroll_card" style="flex-basis: 100%; flex-grow: 1; margin-right: 0; margin-left: 0;" />
-            </ui:ScrollView>
-            <ui:VisualElement name="Top" style="flex-grow: 1; position: absolute; flex-direction: row; width: 460px; background-color: rgb(0, 0, 0); border-top-left-radius: 10px; border-top-right-radius: 10px; left: -1px; height: 51px; display: flex; top: -2px; align-self: center;">
-                <ui:Label text="Featured" style="color: rgb(255, 255, 255); font-size: 25px; -unity-font-style: bold;" />
-                <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-self: center; align-items: center; justify-content: flex-end;">
-                    <ui:Label text="00d : 00h" emoji-fallback-support="true" style="left: 0; color: rgb(255, 255, 255); align-self: flex-end; align-items: flex-end; font-size: 20px; -unity-font-style: bold;" />
+            <ui:VisualElement style="flex-grow: 1; flex-basis: 27%;">
+                <ui:ScrollView mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" nested-interaction-kind="Default" scroll-deceleration-rate="0.135" name="CardScrollView" mouse-wheel-scroll-size="18" class="game-scroll-view card" style="flex-basis: 100%; flex-grow: 0;">
+                    <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;); flex-basis: auto; width: 100%; height: 100%; flex-shrink: 0; margin-right: 0;" />
+                    <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;); flex-basis: auto; width: 100%; height: 100%; flex-shrink: 0; margin-right: 0;" />
+                    <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;); flex-basis: auto; width: 100%; height: 100%; flex-shrink: 0; margin-right: 0;" />
+                    <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;); flex-basis: auto; width: 100%; height: 100%; flex-shrink: 0; margin-right: 0;" />
+                    <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;); flex-basis: auto; width: 100%; height: 100%; flex-shrink: 0; margin-right: 0;" />
+                </ui:ScrollView>
+                <ui:VisualElement name="Top" style="flex-grow: 1; position: absolute; flex-direction: row; width: 100%; background-color: rgb(0, 0, 0); border-top-left-radius: 10px; border-top-right-radius: 10px; left: -1px; height: 51px; display: flex; top: -2px; align-self: center;">
+                    <ui:Label text="Featured" style="color: rgb(255, 255, 255); font-size: 25px; -unity-font-style: bold;" />
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-self: center; align-items: center; justify-content: flex-end;">
+                        <ui:Label text="00d : 00h" emoji-fallback-support="true" style="left: 0; color: rgb(255, 255, 255); align-self: flex-end; align-items: flex-end; font-size: 20px; -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Bottom" style="flex-grow: 1; position: absolute; align-self: center; height: 50px; width: 100%; left: 6px; top: 594px;">
+                    <ui:VisualElement name="Indicators" style="flex-grow: 1; flex-direction: row; align-self: center; align-items: center; justify-content: center;">
+                        <ui:VisualElement class="indicators active" />
+                        <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+                        <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+                        <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+                        <ui:VisualElement class="indicators" style="flex-grow: 0;" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="Bottom" style="flex-grow: 1; position: absolute; align-self: center; height: 50px; width: 450px; left: 6px; top: 594px;">
-                <ui:VisualElement name="Indicators" style="flex-grow: 1; flex-direction: row; align-self: center; align-items: center; justify-content: center;">
-                    <ui:VisualElement class="indicators active" />
-                    <ui:VisualElement class="indicators" style="flex-grow: 0;" />
-                    <ui:VisualElement class="indicators" style="flex-grow: 0;" />
-                    <ui:VisualElement class="indicators" style="flex-grow: 0;" />
-                    <ui:VisualElement class="indicators" style="flex-grow: 0;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:Button name="Button" class="game-card large card" style="flex-basis: 23%; margin-left: 30px; justify-content: flex-end;">
-                <ui:VisualElement name="VisualElement" class="card-image" style="flex-direction: row; align-items: center; justify-content: flex-start;">
-                    <ui:Label text="Head-to-Head" class="card-title" style="font-size: 30px; align-items: center; align-self: center; margin-right: 20px; margin-left: 84px;" />
+            <ui:Button name="HeadtoHead" class="game-card large card" style="flex-basis: 23%; margin-left: 30px; justify-content: flex-end;">
+                <ui:VisualElement name="VisualElement" class="card-image" style="flex-direction: row; align-items: flex-start; justify-content: center; align-self: flex-start;">
+                    <ui:Label text="Head-to-Head" class="card-title" style="font-size: 30px; align-items: center; align-self: center; margin-right: 20px; margin-left: 76px; -unity-text-align: middle-right;" />
                 </ui:VisualElement>
                 <ui:Label text="Earn coins, climb divisions,&#10;and get rewards" class="card-subtitle" style="margin-bottom: 59px; font-size: 15px; -unity-font-style: normal;" />
             </ui:Button>
@@ -47,6 +49,7 @@
                     <ui:Label text="Pick-Up Games" class="card-title smallcard_label" />
                 </ui:Button>
             </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

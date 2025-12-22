@@ -1,11 +1,11 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="Card" src="project://database/Assets/UI%20Toolkit/Card.uxml?fileID=9197481963319205126&amp;guid=765966ef5cdc926459bd450ae1c36f4a&amp;type=3#Card" />
     <Style src="project://database/Assets/UI%20Toolkit/Head-to-HeadScreen.uss?fileID=7433441132597879392&amp;guid=d74eb42e1ace2e941bcd4f14127a162e&amp;type=3#Head-to-HeadScreen" />
-    <ui:VisualElement name="TemplateContainer" template="Head-to-Head" style="height: 1078px; align-items: flex-start; align-self: flex-start; justify-content: center; padding-top: 53px; padding-right: 53px; padding-bottom: 53px; padding-left: 53px;">
+    <ui:VisualElement name="TemplateContainer" template="Head-to-Head" style="height: 1078px; align-items: flex-start; align-self: flex-start; justify-content: center; padding-top: 86px; padding-right: 35px; padding-bottom: 86px; padding-left: 86px;">
         <ui:Label text="Head-to-Head" parse-escape-sequences="false" style="color: rgba(255, 255, 255, 0.71); -unity-font-style: bold; font-size: 20px; margin-left: 0;" />
         <ui:VisualElement class="main-container" style="padding-top: 29px; padding-right: 0; padding-bottom: 29px; padding-left: 29px; background-color: rgba(103, 102, 102, 0.82); height: auto; flex-shrink: 1; margin-right: 0; margin-left: 0; flex-grow: 0; flex-basis: auto; width: 1800px;">
             <ui:VisualElement class="header-section" style="flex-direction: row; justify-content: space-between;">
-                <ui:Button text="Button" class="back-button" style="width: 70px; height: 70px; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px;" />
+                <ui:Button text="Button" name="BackButton" class="back-button" style="width: 70px; height: 70px; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px;" />
                 <ui:Label text="Head-to-Head" parse-escape-sequences="true" class="header-title" style="align-self: flex-start; align-items: flex-start; color: rgb(255, 249, 249); -unity-font-style: bold; font-size: 36px; margin-right: 840px; -unity-text-align: upper-center; top: 7px;" />
                 <ui:VisualElement template="UserData" style="align-items: flex-end; align-self: flex-end;">
                     <ui:VisualElement name="UserData" style="flex-grow: 0; flex-shrink: 0; flex-direction: row; height: 135px; width: 589px;">
@@ -33,42 +33,48 @@
             <ui:VisualElement style="flex-grow: 0; flex-direction: row; align-items: center; justify-content: center; align-self: auto; width: 100%; margin-bottom: 15px;">
                 <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; width: 40%; margin-right: 100px; background-color: rgba(0, 0, 0, 0.65); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
                     <ui:VisualElement style="flex-grow: 1;" />
-                    <ui:VisualElement style="flex-grow: 1;">
-                        <ui:VisualElement style="flex-grow: 1;">
-                            <ui:VisualElement style="flex-grow: 1;" />
-                            <ui:VisualElement style="flex-grow: 1;" />
+                    <ui:VisualElement style="flex-grow: 1; border-right-width: 2px; border-right-color: rgb(113, 113, 113); border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
+                        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; width: 80%;">
+                            <ui:VisualElement style="flex-grow: 1;">
+                                <ui:Label text="Division" style="color: rgba(255, 255, 255, 0.7); font-size: 22px; margin-top: 0; margin-bottom: 0;" />
+                                <ui:Label text="Platinum III" style="-unity-font-style: bold; color: rgb(255, 255, 255); font-size: 20px; margin-top: 0;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 1;">
+                                <ui:Label text="Rank" style="color: rgba(255, 255, 255, 0.71); font-size: 22px; margin-top: 0; margin-bottom: 0;" />
+                                <ui:Label text="100" style="-unity-font-style: bold; font-size: 20px; color: rgb(255, 255, 255); margin-top: 0; margin-bottom: 0;" />
+                            </ui:VisualElement>
                         </ui:VisualElement>
-                        <ui:VisualElement style="flex-grow: 1;">
-                            <ui:Label text="Label" />
-                            <ui:Label text="Label" />
+                        <ui:VisualElement style="flex-grow: 0; flex-direction: row; background-color: rgba(159, 159, 159, 0.24); flex-shrink: 0; width: 80%; margin-bottom: 8px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;">
+                            <ui:Label text="Ends in :" style="color: rgb(255, 255, 255); font-size: 21px;" />
+                            <ui:Label text="00h 00m" style="color: rgb(255, 255, 255); font-size: 20px;" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement style="flex-grow: 1;">
-                        <ui:Label text="Label" />
-                        <ui:VisualElement style="flex-grow: 1;">
+                        <ui:Label text="BONUSES" style="color: rgba(255, 255, 255, 0.71); font-size: 22px;" />
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
                             <ui:VisualElement style="flex-grow: 1;">
                                 <ui:VisualElement style="flex-grow: 1;" />
-                                <ui:Label text="Label" />
+                                <ui:Label text="+99%" style="color: rgb(255, 255, 255); font-size: 20px;" />
                             </ui:VisualElement>
                             <ui:VisualElement style="flex-grow: 1;">
                                 <ui:VisualElement style="flex-grow: 1;" />
-                                <ui:Label text="Label" />
+                                <ui:Label text="+99%" style="color: rgb(255, 255, 255); font-size: 20px;" />
                             </ui:VisualElement>
                             <ui:VisualElement style="flex-grow: 1;">
                                 <ui:VisualElement style="flex-grow: 1;" />
-                                <ui:Label text="Label" />
+                                <ui:Label text="+99%" style="font-size: 20px; color: rgb(255, 255, 255);" />
                             </ui:VisualElement>
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 20%; background-color: rgba(0, 0, 0, 0.65); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; margin-right: 0; right: 68px;">
-                    <ui:VisualElement style="flex-grow: 1;" />
-                    <ui:VisualElement style="flex-grow: 1;">
-                        <ui:Label text="Label" />
-                        <ui:Label text="Label" />
-                        <ui:VisualElement style="flex-grow: 1;">
-                            <ui:Label text="Label" />
-                            <ui:Label text="Label" />
+                <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 19%; background-color: rgba(0, 0, 0, 0.65); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; margin-right: 0; right: 68px; height: 100%; flex-direction: row;">
+                    <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; width: 40%;" />
+                    <ui:VisualElement style="flex-grow: 0; flex-shrink: 0;">
+                        <ui:Label text="SPONSOR" style="font-size: 22px; color: rgba(255, 255, 255, 0.71);" />
+                        <ui:Label text="MAX" style="-unity-font-style: bold; font-size: 20px; color: rgb(255, 255, 255);" />
+                        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; width: 100%; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; background-color: rgba(115, 113, 113, 0.38);">
+                            <ui:Label text="Ends in :" style="color: rgb(255, 255, 255); font-size: 20px;" />
+                            <ui:Label text="00h 00m" style="font-size: 20px; color: rgb(255, 255, 255);" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
@@ -97,11 +103,11 @@
                                 </ui:VisualElement>
                             </ui:VisualElement>
                         </ui:VisualElement>
-                        <ui:ScrollView mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" style="flex-direction: column; flex-shrink: 0; width: 1138px; background-color: rgba(0, 0, 0, 0.5); margin-left: 15px; height: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
-                            <ui:Instance template="Card" />
-                            <ui:Instance template="Card" />
-                            <ui:Instance template="Card" />
-                            <ui:Instance template="Card" />
+                        <ui:ScrollView mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" name="CardScrollView" style="flex-direction: column; flex-shrink: 0; width: 1138px; background-color: rgba(0, 0, 0, 0.5); margin-left: 15px; height: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Instance template="Card" style="margin-right: 10px; margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" />
+                            <ui:Instance template="Card" style="margin-right: 10px; margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" />
+                            <ui:Instance template="Card" style="margin-right: 10px; margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" />
+                            <ui:Instance template="Card" style="margin-right: 10px; margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" />
                         </ui:ScrollView>
                     </ui:VisualElement>
                 </ui:VisualElement>

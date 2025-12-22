@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 1859920847}
   - component: {fileID: 1859920846}
   - component: {fileID: 1859920848}
+  - component: {fileID: 1859920849}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -243,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: fd849c49961e24540b7294253e3a5938, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: f710b909a4f31db4f983e153b85e1653, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: 7055238fbfd4b2045a0ff2da8bd53145, type: 3}
   m_SortingOrder: 0
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
@@ -276,6 +277,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WGTScreen: {fileID: 1859920846}
+--- !u!114 &1859920849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859920845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c761cdc1c0739ab4b8f85ba520e0252c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainVisualTree: {fileID: 1859920846}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

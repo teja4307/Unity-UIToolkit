@@ -1,35 +1,36 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" editor-extension-mode="False">
-    <ui:VisualElement class="card">
+    <Style src="project://database/Assets/UI%20Toolkit/Card.uss?fileID=7433441132597879392&amp;guid=875883b7f5a249f47bd54d7a2be33b11&amp;type=3#Card" />
+    <ui:VisualElement class="card" style="width: 100%; height: 100%; flex-basis: 100%;">
         <ui:VisualElement class="card-header">
-            <ui:VisualElement class="header-row">
-                <ui:VisualElement class="header-item">
+            <ui:VisualElement class="header-row" style="justify-content: space-between;">
+                <ui:VisualElement class="header-item" style="flex-shrink: 0; width: 50%; flex-wrap: nowrap;">
                     <ui:VisualElement class="header-icon" style="background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;);" />
-                    <ui:Label text="3 Holes" class="header-text" />
+                    <ui:Label text="3 Holes" class="header-text" style="-unity-text-align: upper-left; align-self: flex-start;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="header-item">
+                <ui:VisualElement class="header-item" style="flex-shrink: 0; width: 50%; justify-content: flex-end;">
                     <ui:VisualElement class="header-icon" style="background-image: url(&quot;project://database/Assets/background.png?fileID=-7443756053782179069&amp;guid=1bf51863682f5e44687d61b46ac525cc&amp;type=3#background_0&quot;);" />
-                    <ui:Label text="426" class="header-text" />
+                    <ui:Label text="426" class="header-text" style="align-self: flex-start;" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:Label text="Low Chaos" class="card-title" style="-unity-text-align: upper-center;" />
-            <ui:Label text="CTTH Match Play" class="card-subtitle" style="-unity-text-align: upper-center;" />
+            <ui:Label text="Low Chaos" class="card-title" style="align-self: center; margin-bottom: 0;" />
+            <ui:Label text="CTTH Match Play" class="card-subtitle" style="align-self: center; margin-top: 0;" />
         </ui:VisualElement>
-        <ui:VisualElement class="card-tabs">
-            <ui:Label text="Prizes" class="tab tab-active" />
-            <ui:Label text="Rules" class="tab tab-inactive" />
+        <ui:VisualElement class="card-tabs" style="flex-shrink: 0;">
+            <ui:Label text="Prizes" class="tab tab-active" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; align-self: center; align-items: center; -unity-text-align: upper-center;" />
+            <ui:Label text="Rules" class="tab tab-inactive" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; align-self: flex-start; -unity-text-align: upper-center;" />
         </ui:VisualElement>
         <ui:VisualElement class="card-content">
             <ui:VisualElement class="prize-item">
                 <ui:VisualElement class="prize-icon" />
-                <ui:Label text="1.8K Coins" class="prize-text" />
+                <ui:Label text="1.8K Coins" class="prize-text" style="-unity-text-align: upper-center; align-self: auto; justify-content: flex-start; align-items: center; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0;" />
             </ui:VisualElement>
             <ui:VisualElement class="prize-item">
                 <ui:VisualElement class="prize-icon" />
-                <ui:Label text="Amateur" class="prize-text" />
+                <ui:Label text="Amateur" class="prize-text" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0;" />
             </ui:VisualElement>
             <ui:VisualElement class="prize-item">
                 <ui:VisualElement class="prize-icon" />
-                <ui:Label text="1x Points" class="prize-text" />
+                <ui:Label text="1x Points" class="prize-text" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:Button text="ENTER 1.0K" class="enter-button" />

@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,25 +8,41 @@ public class ScrollCarouselHandlerWGT : MonoBehaviour
     public UIDocument WGTScreen;
 
     private ScrollView scrollView;
+    private VisualElement viewport;
     private VisualElement[] indicators;
 
     private int index = 0;
     private float cardWidth;
-    private bool isSnapping;
+
+    // Drag state
+    private bool isDragging;
+    private float startPointerX;
+    private float startScrollX;
 
     private void Start()
     {
         var root = WGTScreen.rootVisualElement;
 
+        // Get ScrollView
         scrollView = root.Q<ScrollView>("CardScrollView");
+        scrollView.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
+        scrollView.verticalScrollerVisibility = ScrollerVisibility.Hidden;
 
+        // 🔑 Get viewport (THIS is the interactive element)
+        viewport = scrollView.Q("unity-content-viewport");
+        viewport.pickingMode = PickingMode.Position;
+
+        // Register pointer callbacks
+        viewport.RegisterCallback<PointerDownEvent>(OnPointerDown);
+        viewport.RegisterCallback<PointerMoveEvent>(OnPointerMove);
+        viewport.RegisterCallback<PointerUpEvent>(OnPointerUp);
+        viewport.RegisterCallback<PointerCancelEvent>(OnPointerUp);
+
+        // Indicators
         VisualElement indicatorsContainer = root.Q<VisualElement>("Indicators");
+        indicators = indicatorsContainer.Children().ToArray();
 
-        indicators = indicatorsContainer
-                        .Children()
-                        .ToArray();
-
-        // Wait until cards are added AND layout is resolved
+        // Wait for layout
         scrollView.schedule.Execute(Init).Until(() =>
             scrollView.contentContainer.childCount > 0 &&
             scrollView.resolvedStyle.width > 0 &&
@@ -36,10 +52,9 @@ public class ScrollCarouselHandlerWGT : MonoBehaviour
 
     private void Init()
     {
-        // Each card fits the ScrollView width
         cardWidth = scrollView.resolvedStyle.width;
 
-        // Listen to scroll movement
+        // Listen to wheel / scrollbar scroll
         scrollView.horizontalScroller.valueChanged += OnScrollChanged;
 
         UpdateIndicators();
@@ -51,9 +66,42 @@ public class ScrollCarouselHandlerWGT : MonoBehaviour
             scrollView.horizontalScroller.valueChanged -= OnScrollChanged;
     }
 
+    // ================= POINTER DRAG =================
+
+    private void OnPointerDown(PointerDownEvent evt)
+    {
+        isDragging = true;
+        startPointerX = evt.position.x;
+        startScrollX = scrollView.scrollOffset.x;
+
+        viewport.CapturePointer(evt.pointerId);
+    }
+
+    private void OnPointerMove(PointerMoveEvent evt)
+    {
+        if (!isDragging)
+            return;
+
+        float delta = evt.position.x - startPointerX;
+        scrollView.scrollOffset = new Vector2(startScrollX - delta, 0);
+    }
+
+    private void OnPointerUp(EventBase evt)
+    {
+        if (!isDragging)
+            return;
+
+        isDragging = false;
+        viewport.ReleasePointer(PointerId.mousePointerId);
+
+        SnapToNearest();
+    }
+
+    // ================= SCROLL LOGIC =================
+
     private void OnScrollChanged(float value)
     {
-        if (cardWidth <= 0 || isSnapping)
+        if (cardWidth <= 0)
             return;
 
         int newIndex = Mathf.RoundToInt(value / cardWidth);
@@ -64,22 +112,15 @@ public class ScrollCarouselHandlerWGT : MonoBehaviour
             index = newIndex;
             UpdateIndicators();
         }
-
-        // Snap after scroll settles
-        scrollView.schedule.Execute(SnapToIndex).ExecuteLater(80);
     }
 
-    private void SnapToIndex()
+    private void SnapToNearest()
     {
-        if (cardWidth <= 0)
-            return;
+        index = Mathf.RoundToInt(scrollView.scrollOffset.x / cardWidth);
+        index = Mathf.Clamp(index, 0, scrollView.contentContainer.childCount - 1);
 
-        isSnapping = true;
-
-        float target = index * cardWidth;
-        scrollView.horizontalScroller.value = target;
-
-        isSnapping = false;
+        scrollView.scrollOffset = new Vector2(index * cardWidth, 0);
+        UpdateIndicators();
     }
 
     private void UpdateIndicators()
